@@ -1,0 +1,50 @@
+<h3>FORUM</h3>
+
+<br />
+
+<h4>You Know the Rules, Dont you :-</h4>
+<p>
+    &nbsp; &nbsp; &#10148; &nbsp;
+    No Promotional Comments, Spam, or Ads
+    <br />
+    &nbsp; &nbsp; &#10148; &nbsp;
+    No Hate Speech, Credible Threats, Insult, or Direct Attacks
+    <br />
+    &nbsp; &nbsp; &#10148; &nbsp;
+    No Racist, Religious, Political, Illegal Discussion or Obscene
+    <br />
+    &nbsp; &nbsp; &#10148; &nbsp;
+    Don't be an Impostor
+    <br />
+    &nbsp; &nbsp; &#10148; &nbsp;
+    Report or Downvote the Bullshit
+    <br />
+    &nbsp; &nbsp; &#10148; &nbsp;
+    I Moderate your Comments
+</p>
+
+<br />
+
+<h4>Share what you are thinking :</h4>
+<form action="/forum" method="post">
+    &nbsp; &nbsp;
+    <textarea name="chat" placeholder="Enter your Message" maxlength="10000" required></textarea>
+    <br /><br /> &nbsp; &nbsp;
+    <button class="menuElement" type="submit">Submit</button>
+</form>
+
+<br />
+
+<p>
+    {{#each errors}}
+  <div class="redChat">{{output}}</div>
+    {{else}}
+    {{/each}}
+
+    {{#each message}}
+    <p class="blueChat">{{chat}}</p>
+    {{else}}
+    <p class="blueChat">The Forum is Empty or An Error Occured!</p>
+    <p class="blueChat">You may start the discussion</p>
+    {{/each}}
+</p>

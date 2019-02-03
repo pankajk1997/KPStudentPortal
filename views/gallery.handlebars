@@ -1,0 +1,63 @@
+<h3>GALLERY</h3>
+
+<br />
+
+<h4>You Know the Rules, Dont you :-</h4>
+<p>
+    &nbsp; &nbsp; &#10148; &nbsp;
+    No Promotional Content, Spam, or Ads
+    <br />
+    &nbsp; &nbsp; &#10148; &nbsp;
+    Don't upload copyright materials
+    <br />
+    &nbsp; &nbsp; &#10148; &nbsp;
+    Don't upload without appropriate permissions
+    <br />
+    &nbsp; &nbsp; &#10148; &nbsp;
+    Report or Downvote the Crap
+    <br />
+    &nbsp; &nbsp; &#10148; &nbsp;
+    I Moderate your Content
+</p>
+
+<br />
+
+<h4>Share your photos and videos :</h4>
+<form action="/gallery" method="post">
+    &nbsp; &nbsp;
+    <label for="title">Occasion: &nbsp; &nbsp;&nbsp;</label>
+    <input name="title" placeholder="Enter the title of photoshoot" maxlength="100" required></input>
+    <br /><br /> &nbsp; &nbsp;
+    <label for="link">Link: &nbsp;</label>
+    <input name="link" placeholder="Enter the media location link (like google drive folder link) " maxlength="500" required></input>
+    <br /><br /> &nbsp; &nbsp;
+    <label for="thumb">Thumbnail: &nbsp;</label>
+    <input name="thumb" placeholder="Enter the photo location link to used as thumbnail (like direct image link from imgbb)" maxlength="500" required></input>
+    <br /><br /> &nbsp; &nbsp;
+    Hint: You can upload an image on <a href="https://imgbb.com/upload" target="_blank">imgbb</a> and get its <i>direct link</i> or fill <i>https://i.ibb.co/HBHm0Vr/gallery.png</i>
+    <br /><br /> &nbsp; &nbsp;
+    <button class="menuElement" type="submit">Submit</button>
+</form>
+
+<br />
+
+<p>
+    {{#each errors}}
+  <div class="redChat">{{output}}</div>
+    {{else}}
+    {{/each}}
+
+    {{#each media}}
+    <p class="blueChat">
+        <img class="gallery" src="{{thumb}}" alt="Media Link" onclick="javascript:location.href='{{link}}'" target="_blank"/>
+        <a onclick=href="{{link}}" target="_blank">{{title}}</a>
+    </p>
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    {{else}}
+    <p class="blueChat">
+        <img class="gallery" src="https://image.ibb.co/dExaZm/original.gif" alt="Gallery Empty" onclick="javascript:location.href='#'"/>
+        <a onclick=href='#'>The Gallery is Empty or An Error Occured!<br />You may add some Media</a>
+    </p>
+    <br /><br /><br /><br /><br /><br /><br /><br />
+    {{/each}}
+</p>

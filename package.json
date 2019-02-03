@@ -1,0 +1,26 @@
+{
+  "name": "kpstudentportal",
+  "version": "1.0.0",
+  "description": "Unofficial Student Portal CDAC ACTS Knowledge Park, Bengaluru",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pankajk2526/KPStudentPortal.git"
+  },
+  "author": "Pankaj Kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pankajk2526/KPStudentPortal/issues"
+  },
+  "homepage": "https://github.com/pankajk2526/KPStudentPortal#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^5.4.7",
+    "path": "^0.12.7"
+  }
+}

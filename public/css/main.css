@@ -1,0 +1,129 @@
+#logo {
+	width: 200px;
+	height: 70px;
+}
+
+body {
+	font-family: 'Krub', sans-serif;
+	background-color: #DCDCDC;
+}
+
+textarea {
+	width: 90%;
+	height: 200px;
+	float: center;
+	padding: 12px 12px;
+}
+
+input {
+	width: 75%;
+	float: center;
+	padding: 12px 12px;
+}
+
+.topBar {
+	padding: 3px 400px;
+	background-color: #9370DB;
+	color: white;
+}
+
+.barRight {
+	text-align: right;
+	float: right;
+}
+
+.logoBar {
+	padding: 3px 400px;
+	background-color: white;
+}
+
+.socialButton {
+	vertical-align: -25px;
+}
+
+.socialButton1 {
+	vertical-align: -37px;
+}
+
+#menuBar {
+	text-align: center;
+	padding: 10px 400px;
+	background-color: #9370DB;
+}
+
+.menuElement {
+	padding: 3px 5px;
+	font-size: 20px;
+	color: black;
+	background-color: lightgreen;
+	border-radius: 7px;
+}
+
+.rightButton {
+	float: right;
+}
+
+.centerButton {
+	margin-left: 45%;
+}
+
+#main {
+	margin: 0 auto;
+	width: 1110px;
+	background-color: white;
+	padding: 5px 20px;
+	box-shadow: 12px 0 15px -4px rgba(103, 111, 121, 0.8), -12px 0 8px -4px rgba(103, 111, 121, 0.8);
+
+}
+
+#aboutImg {
+	float:left;
+	width:650px;
+	height:350px;
+	padding:10px;
+}
+
+.blueChat {
+	background-color: lightblue;
+	width: 75%;
+	margin-left: 40px;
+	margin-bottom: 10px;
+	border-radius: 0 50px 50px;
+	padding: 12px 12px;
+}
+
+.redChat {
+	background-color: lightcoral;
+	width: 75%;
+	margin-left: 40px;
+	margin-bottom: 10px;
+	border-radius: 0 50px 50px;
+	padding: 12px 12px;
+}
+
+.gallery {
+	margin-right: 20px;
+	float: left;
+	width: 250px;
+	height: 200px;
+}
+
+img:hover {
+	cursor: pointer;
+}
+
+a:hover {
+	color: black;
+	background-color: #FFE4B5;
+	cursor: pointer;
+}
+
+.hovshade:hover {
+	box-shadow: 0 0 5px 2px;
+}
+
+button:hover {
+	color: black;
+	background-color: #FFE4B5;
+	cursor: pointer;
+}
