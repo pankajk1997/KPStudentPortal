@@ -1,0 +1,23 @@
+<h4>Sign Up for an Account :</h4>
+<form class="formdiv" action="/register" method="post">
+    &nbsp;&nbsp;
+    <label for="fname">First Name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+    <input name="fname" value="{{fname}}" placeholder="Enter you First Name" maxlength="50" required></input>
+    <br /><br />&nbsp;&nbsp;
+    <label for="lname">Last Name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+    <input name="lname" value="{{lname}}" placeholder="Enter you Last Name" maxlength="50" required></input>
+    <br /><br />&nbsp;&nbsp;
+    <label for="email">Email:
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+    <input name="email" value="{{email}}" type="email" placeholder="Enter your Email" maxlength="50" required></input>
+    <br /><br />&nbsp;&nbsp;
+    <label for="passwd">Password:
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+    <input name="passwd" value="{{passwd}}" type="password" placeholder="Enter a New Password" maxlength="100" required></input>
+    <br /><br />&nbsp;&nbsp;
+    <label for="passwd1">Confirm Password: </label>
+    <input name="passwd1" value="{{passwd1}}" type="password" placeholder="Enter the Password Again" maxlength="100"
+        required></input>
+    <br /><br />&nbsp;&nbsp;
+    <button class="menuElement" type="submit">Sign Up</button>
+</form>

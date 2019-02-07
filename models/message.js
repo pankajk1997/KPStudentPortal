@@ -1,13 +1,17 @@
 const mongoose = require('mongoose');
 const schema = mongoose.Schema({
-    chat:{
+    chat: {
         type: String,
         required: true
     },
-    date:{
+    user: {
+        type: String,
+        required: true
+    },
+    date: {
         type: Date,
         default: Date.now
     }
 });
 
-mongoose.model('message',schema);
+mongoose.model('message', schema);

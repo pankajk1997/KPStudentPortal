@@ -12,13 +12,13 @@ textarea {
 	width: 90%;
 	height: 200px;
 	float: center;
-	padding: 12px 12px;
+	padding: 12px;
 }
 
 input {
 	width: 75%;
 	float: center;
-	padding: 12px 12px;
+	padding: 12px;
 }
 
 .topBar {
@@ -71,16 +71,16 @@ input {
 	margin: 0 auto;
 	width: 1110px;
 	background-color: white;
-	padding: 5px 20px;
+	padding: 20px;
 	box-shadow: 12px 0 15px -4px rgba(103, 111, 121, 0.8), -12px 0 8px -4px rgba(103, 111, 121, 0.8);
 
 }
 
 #aboutImg {
-	float:left;
-	width:650px;
-	height:350px;
-	padding:10px;
+	float: left;
+	width: 650px;
+	height: 350px;
+	padding: 10px;
 }
 
 .blueChat {
@@ -89,7 +89,15 @@ input {
 	margin-left: 40px;
 	margin-bottom: 10px;
 	border-radius: 0 50px 50px;
-	padding: 12px 12px;
+	padding: 12px;
+}
+
+.blueChatHead {
+	background-color: lightblue;
+	width: 95%;
+	margin-bottom: 25px;
+	border-radius: 0 0 50px 50px;
+	padding: 12px 25px;
 }
 
 .redChat {
@@ -98,7 +106,33 @@ input {
 	margin-left: 40px;
 	margin-bottom: 10px;
 	border-radius: 0 50px 50px;
-	padding: 12px 12px;
+	padding: 12px;
+}
+
+.redChatHead {
+	background-color: lightcoral;
+	width: 95%;
+	margin-bottom: 25px;
+	border-radius: 0 0 50px 50px;
+	padding: 12px 25px;
+}
+
+.formdiv {
+	background-color: rgb(255, 209, 2);
+	padding: 20px;
+	border-radius: 10px;
+}
+
+.hidden {
+	display: none;
+}
+
+.curruser {
+	display: none;
+}
+
+.msguser {
+	display: none;
 }
 
 .gallery {

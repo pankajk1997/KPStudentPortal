@@ -1,21 +1,25 @@
 const mongoose = require('mongoose');
 const schema1 = mongoose.Schema({
-    title:{
+    title: {
         type: String,
         required: true
     },
-    link:{
+    link: {
         type: String,
         required: true
     },
-    thumb:{
+    thumb: {
         type: String,
         required: true
     },
-    date:{
+    user: {
+        type: String,
+        required: true
+    },
+    date: {
         type: Date,
         default: Date.now
     }
 });
 
-mongoose.model('media',schema1);
+mongoose.model('media', schema1);
