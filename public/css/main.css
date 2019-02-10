@@ -94,10 +94,10 @@ pre {
 	float: left;
 	width: 650px;
 	height: 350px;
-	padding: 10px;
+	padding: 10px;                      /* ////////////////////////////////////////////////////////////////////////////////////test without google font */
 }
 
-.notice {
+.notice {																	
 	background-color: rgb(205, 157, 245);
 	width: 91%;
 	margin-left: 40px;
@@ -117,15 +117,6 @@ pre {
 	word-wrap: break-word;
 }
 
-.blueChatHead {
-	background-color: lightblue;
-	width: 95.5%;
-	margin-bottom: 25px;
-	border-radius: 0 0 50px 50px;
-	padding: 12px 25px;
-	word-wrap: break-word;
-}
-
 .redChat {
 	background-color: lightcoral;
 	width: 75%;
@@ -136,13 +127,24 @@ pre {
 	word-wrap: break-word;
 }
 
-.redChatHead {
-	background-color: lightcoral;
+.blueChatHead {
+	background-color: lightblue;
 	width: 95.5%;
-	margin-bottom: 25px;
+	margin-bottom: 10px;
 	border-radius: 0 0 50px 50px;
 	padding: 12px 25px;
 	word-wrap: break-word;
+	text-align: center;
+}
+
+.redChatHead {
+	background-color: lightcoral;
+	width: 95.5%;
+	margin-bottom: 10px;
+	border-radius: 0 0 50px 50px;
+	padding: 12px 25px;
+	word-wrap: break-word;
+	text-align: center;
 }
 
 .formdiv {
@@ -196,11 +198,11 @@ button:hover {
 	}
 
 	.topBar {
-		padding: 1px 25px;
+		padding: 1px 20px;
 	}
 
 	.logoBar {
-		padding: 1px 25px;
+		padding: 1px 20px;
 	}
 
 	#menuBar {
