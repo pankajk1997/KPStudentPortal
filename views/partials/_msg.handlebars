@@ -1,7 +1,16 @@
-{{#if success_msg}}
-<div class="blueChatHead">{{success_msg}}</div>
+{{#if error}}
+<div class="redChatHead">{{error}}</div>
 {{/if}}
+
+{{#each errors}}
+<div class="redChatHead">{{output}}</div>
+{{else}}
+{{/each}}
 
 {{#if error_msg}}
 <div class="redChatHead">{{error_msg}}</div>
+{{/if}}
+
+{{#if success_msg}}
+<div class="blueChatHead">{{success_msg}}</div>
 {{/if}}

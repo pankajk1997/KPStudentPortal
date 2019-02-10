@@ -1,14 +1,10 @@
 const mongoose = require('mongoose');
 const schema = mongoose.Schema({
-    chat: {
+    title: {
         type: String,
         required: true
     },
     user: {
-        type: String,
-        required: true
-    },
-    forum_id: {
         type: String,
         required: true
     },
@@ -18,4 +14,4 @@ const schema = mongoose.Schema({
     }
 });
 
-mongoose.model('message', schema);
+mongoose.model('forum', schema);

@@ -1,0 +1,47 @@
+<h3>DISCUSSION ID: {{fid}}</h3>
+
+<br />
+
+{{#if bool}}
+{{else}}
+<h4>Share what you are thinking :</h4>
+<form class="formdiv" action="/forum{{fid}}" method="post">
+    &nbsp;&nbsp;
+    <textarea name="chat" placeholder="Enter your Message" maxlength="10000" required></textarea>
+    <br /><br />&nbsp;&nbsp;
+    <button class="menuElement" type="submit">Submit</button>
+</form>
+
+<br />
+
+{{> _notifylogin}}
+
+<br />
+{{/if}}
+
+<p>
+    {{#each message}}
+    <span class="curruser">{{../user.username}}</span><br /><span class="msguser">{{user}}</span><span> says:</span><br />
+    <pre class="blueChat">{{chat}}
+    </pre>
+    <form class="hidden" method="post" action="/forum/{{id}}?_method=DELETE">
+        <input type="hidden" name="_method" value="DELETE">
+        <button type="submit" class="menuElement centerButton" value="Delete">Delete</button>
+    </form>
+    {{else}}
+    <p class="blueChat">The Forum has no more messages or An Error Occured!</p>
+    <p class="blueChat">You may add a message</p>
+    {{/each}}
+</p>
+
+<br />
+
+<p>
+    <a class="menuElement centerButton" onclick=href='/forum{{nextpage}}&{{fid}}'>View More</a>
+</p>
+
+<br />
+
+{{> _about}}
+
+<script src="./js/hidedelete.js"></script>

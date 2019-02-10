@@ -21,6 +21,20 @@ input {
 	padding: 12px;
 }
 
+pre {
+	white-space: pre-wrap;
+	/* Since CSS 2.1 */
+	white-space: -moz-pre-wrap;
+	/* Mozilla, since 1999 */
+	white-space: -pre-wrap;
+	/* Opera 4-6 */
+	white-space: -o-pre-wrap;
+	/* Opera 7 */
+	word-wrap: break-word;
+	/* Internet Explorer 5.5+ */
+	font-size: 15px;
+}
+
 .topBar {
 	padding: 3px 400px;
 	background-color: #9370DB;
@@ -83,13 +97,24 @@ input {
 	padding: 10px;
 }
 
+.notice {
+	background-color: rgb(205, 157, 245);
+	width: 75%;
+	margin-left: 40px;
+	margin-bottom: 10px;
+	border-radius: 20px;
+	padding: 12px;
+	word-wrap: break-word;
+}
+
 .blueChat {
 	background-color: lightblue;
 	width: 75%;
 	margin-left: 40px;
 	margin-bottom: 10px;
-	border-radius: 0 50px 50px;
+	border-radius: 0 20px 0 20px;
 	padding: 12px;
+	word-wrap: break-word;
 }
 
 .blueChatHead {
@@ -98,6 +123,7 @@ input {
 	margin-bottom: 25px;
 	border-radius: 0 0 50px 50px;
 	padding: 12px 25px;
+	word-wrap: break-word;
 }
 
 .redChat {
@@ -105,8 +131,9 @@ input {
 	width: 75%;
 	margin-left: 40px;
 	margin-bottom: 10px;
-	border-radius: 0 50px 50px;
+	border-radius: 0 20px 0 20px;
 	padding: 12px;
+	word-wrap: break-word;
 }
 
 .redChatHead {
@@ -115,6 +142,7 @@ input {
 	margin-bottom: 25px;
 	border-radius: 0 0 50px 50px;
 	padding: 12px 25px;
+	word-wrap: break-word;
 }
 
 .formdiv {
@@ -131,15 +159,15 @@ input {
 	display: none;
 }
 
-.msguser {
-	display: none;
-}
-
 .gallery {
 	margin-right: 20px;
 	float: left;
 	width: 250px;
 	height: 200px;
+}
+
+.description {
+	height: 175px;
 }
 
 img:hover {
@@ -160,4 +188,22 @@ button:hover {
 	color: black;
 	background-color: #FFE4B5;
 	cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+	body {
+		width: 1150px;
+	}
+
+	.topBar {
+		padding: 1px 50px;
+	}
+
+	.logoBar {
+		padding: 1px 50px;
+	}
+
+	#menuBar {
+		padding: 10px;
+	}
 }

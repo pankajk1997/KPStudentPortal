@@ -22,6 +22,8 @@
 
 <br />
 
+{{#if bool}}
+{{else}}
 <h4>Share your photos and videos :</h4>
 <form class="formdiv" action="/gallery" method="post">
     &nbsp;&nbsp;
@@ -47,27 +49,31 @@
 {{> _notifylogin}}
 
 <br />
+{{/if}}
 
 <p>
     {{#each media}}
-    <p class="blueChat">
+    <span class="curruser">{{../user.username}}</span><br /><span class="msguser">{{user}}</span><span> posted:</span><br />
+    <p class="blueChat description">
         <img class="gallery" src="{{thumb}}" alt="Media Link" onclick="javascript:location.href='{{link}}'" target="_blank" />
-        <a onclick=href="{{link}}" target="_blank">{{title}}</a>
-        <form class="hidden" method="post" action="/gallery/{{id}}?_method=DELETE">
-            <p class="curruser">{{../user._id}}</p>
-            <p class="msguser">{{user}}</p>
-            <input type="hidden" name="_method" value="DELETE">
-            <button type="submit" class="menuElement centerButton" value="Delete">Delete</button>
-        </form>
+        <a onclick="javascript:location.href='{{link}}'" target="_blank">{{title}}</a>
     </p>
-    <br /><br /><br /><br /><br /><br />
+    <form class="hidden" method="post" action="/gallery/{{id}}?_method=DELETE">
+        <input type="hidden" name="_method" value="DELETE">
+        <button type="submit" class="menuElement centerButton" value="Delete">Delete</button>
+    </form>
     {{else}}
-    <p class="blueChat">
+    <p class="blueChat description">
         <img class="gallery" src="https://image.ibb.co/dExaZm/original.gif" alt="Gallery Empty" onclick="javascript:location.href='#'" />
-        <a onclick=href='#'>The Gallery is Empty or An Error Occured!<br />You may add some Media</a>
+        <a onclick=href='#'>The Gallery has no more content or An Error Occured!<br />You may add some Media</a>
     </p>
-    <br /><br /><br /><br /><br /><br /><br />
     {{/each}}
+</p>
+
+<br />
+
+<p>
+    <a class="menuElement centerButton" onclick=href='/gallery{{nextpage}}'>View More</a>
 </p>
 
 <br />

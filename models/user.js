@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const schema2 = mongoose.Schema({
+const schema = mongoose.Schema({
     fname: {
         type: String,
         required: true
@@ -9,6 +9,10 @@ const schema2 = mongoose.Schema({
         required: true
     },
     email: {
+        type: String,
+        required: true
+    },
+    username: {
         type: String,
         required: true
     },
@@ -26,4 +30,4 @@ const schema2 = mongoose.Schema({
     }
 });
 
-mongoose.model('user', schema2);
+mongoose.model('user', schema);

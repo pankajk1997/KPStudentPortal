@@ -10,11 +10,12 @@ module.exports = function (passport) {
         passwordField: 'passwd'
     }, (email, passwd, done) => {
         usr.findOne({
-            email: email
+            email: email,
+            verified: 1
         }).then(user => {
             if (!user) {
                 return done(null, false, {
-                    message: 'No User Found'
+                    message: 'User Not Verified or Not Registered!'
                 });
             }
 
@@ -24,7 +25,7 @@ module.exports = function (passport) {
                     return done(null, user);
                 } else {
                     return done(null, false, {
-                        message: 'Password Incorrect'
+                        message: 'Password Incorrect!'
                     });
                 }
             });

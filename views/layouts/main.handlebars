@@ -5,6 +5,8 @@
 	<title>CDAC KP Student</title>
 	<link href="https://fonts.googleapis.com/css?family=Krub" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
@@ -18,7 +20,7 @@
 		<div class="barRight">
 			<a class="menuElement socialButton hovshade" onclick=href='https://cdac.in'>Goto Official Website</a>&nbsp;
 			{{#if user}}
-			<a class="menuElement socialButton hovshade" onclick=href='/logout'>Log Out {{user.fname}}</a>
+			<a class="menuElement socialButton hovshade" onclick=href='/logout'>Log Out {{user.username}}</a>
 			{{else}}
 			<a class="menuElement socialButton hovshade" onclick=href='/login'>Log In</a>
 			{{/if}}
@@ -30,20 +32,18 @@
 	</div>
 	<div id="menuBar">
 		<a class="menuElement hovshade" onclick=href='/'>Home</a>&nbsp;
-		<a class="menuElement hovshade" onclick=href='/notice'>Announcements</a>&nbsp;
+		<a class="menuElement hovshade" onclick=href='/notice0'>Announcements</a>&nbsp;
+		<a class="menuElement hovshade" onclick=href='/discussion0'>Forum</a>&nbsp;
+		<a class="menuElement hovshade" onclick=href='/gallery0'>Gallery</a>&nbsp;
+		<a class="menuElement hovshade" onclick=href='/res2'>Resources</a>&nbsp;
 		<a class="menuElement hovshade" onclick=href='/courses'>Courses</a>&nbsp;
 		<a class="menuElement hovshade" onclick=href='/rnd'>R&amp;D</a>&nbsp;
 		<a class="menuElement hovshade" onclick=href='/infra'>Infrastructure</a>&nbsp;
 		<a class="menuElement hovshade" onclick=href='/admission'>Admission</a>&nbsp;
-		<a class="menuElement hovshade" onclick=href='/gallery'>Gallery</a>&nbsp;
-		<a class="menuElement hovshade" onclick=href='/res2'>Resources</a>&nbsp;
-		<a class="menuElement hovshade" onclick=href='/forum'>Forum</a>&nbsp;
 		<a class="menuElement hovshade" onclick=href='#bottomBar'>About</a>
 	</div>
 
 	<div id="main">
-
-		{{> _errors}}
 
 		{{> _msg}}
 

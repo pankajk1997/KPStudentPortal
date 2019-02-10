@@ -1,0 +1,80 @@
+<h3>ANNOUNCEMENTS</h3>
+
+<br />
+
+<h4>You Know the Rules, Dont you :-</h4>
+<p>
+    &nbsp;&nbsp; &#10148; &nbsp;
+    Don't be an Impostor posting Fake Announcements
+    <br />
+    &nbsp;&nbsp; &#10148; &nbsp;
+    Show Authenticity of Announcements by linking to Genuine Websites
+    <br />
+    &nbsp;&nbsp; &#10148; &nbsp;
+    No Promotional Announcements, Spam, or Ads
+    <br />
+    &nbsp;&nbsp; &#10148; &nbsp;
+    No Hate Speech, Credible Threats, Insult, or Direct Attacks
+    <br />
+    &nbsp;&nbsp; &#10148; &nbsp;
+    No Racist, Religious, Political, Illegal Announcements or Obscene
+    <br />
+    &nbsp;&nbsp; &#10148; &nbsp;
+    Report the Bullshit
+    <br />
+    &nbsp;&nbsp; &#10148; &nbsp;
+    I Moderate these Announcements
+</p>
+
+<br />
+
+{{#if bool}}
+{{else}}
+<h4>Report/Declare an Announcement :</h4>
+<form class="formdiv" action="/notice" method="post">
+    &nbsp;&nbsp;
+    <label for="title">Title: &nbsp;&nbsp;&nbsp;&nbsp;</label>
+    <input name="title" placeholder="Enter the title of announcement" maxlength="500" required></input>
+    <br /><br />&nbsp;&nbsp;
+    <label for="link">Link: &nbsp;&nbsp;&nbsp;&nbsp;</label>
+    <input name="link" placeholder="Enter the link of announcement (like a link to a PDF or other media)" maxlength="500"
+        required></input>
+    <br /><br />&nbsp;&nbsp;
+    <button class="menuElement" type="submit">Submit</button>
+</form>
+
+<br />
+
+{{> _notifylogin}}
+
+<br />
+{{/if}}
+
+<p>
+    {{#each notice}}
+    <span class="curruser">{{../user.username}}</span><br /><span class="msguser">{{user}}</span><span> posted:</span><br />
+    <p class="notice">
+        <a onclick="javascript:location.href='{{link}}'" target="_blank">{{title}}</a>
+    </p>
+    <form class="hidden" method="post" action="/notice/{{id}}?_method=DELETE">
+        <input type="hidden" name="_method" value="DELETE">
+        <button type="submit" class="menuElement centerButton" value="Delete">Delete</button>
+    </form>
+    {{else}}
+    <p class="notice">
+        <a onclick=href='#'>There are no more announcements or An Error Occured!<br />You may add some Announcements</a>
+    </p>
+    {{/each}}
+</p>
+
+<br />
+
+<p>
+    <a class="menuElement centerButton" onclick=href='/notice{{nextpage}}'>View More</a>
+</p>
+
+<br />
+
+{{> _about}}
+
+<script src="./js/hidedelete.js"></script>

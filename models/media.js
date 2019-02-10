@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const schema1 = mongoose.Schema({
+const schema = mongoose.Schema({
     title: {
         type: String,
         required: true
@@ -22,4 +22,4 @@ const schema1 = mongoose.Schema({
     }
 });
 
-mongoose.model('media', schema1);
+mongoose.model('media', schema);

@@ -1,0 +1,73 @@
+<h3>DISCUSSIONS</h3>
+
+<br />
+
+<h4>You Know the Rules, Dont you :-</h4>
+<p>
+    &nbsp;&nbsp; &#10148; &nbsp;
+    No Promotional Comments, Spam, or Ads
+    <br />
+    &nbsp;&nbsp; &#10148; &nbsp;
+    No Hate Speech, Credible Threats, Insult, or Direct Attacks
+    <br />
+    &nbsp;&nbsp; &#10148; &nbsp;
+    No Racist, Religious, Political, Illegal Discussion or Obscene
+    <br />
+    &nbsp;&nbsp; &#10148; &nbsp;
+    Don't be an Impostor
+    <br />
+    &nbsp;&nbsp; &#10148; &nbsp;
+    Report the Bullshit
+    <br />
+    &nbsp;&nbsp; &#10148; &nbsp;
+    I Moderate your Comments
+</p>
+
+<br />
+
+{{#if bool}}
+{{else}}
+<h4>Create a Discussion :</h4>
+<form class="formdiv" action="/discussion" method="post">
+    &nbsp;&nbsp;
+    <label for="title">Title: &nbsp;&nbsp;&nbsp;&nbsp;</label>
+    <input name="title" placeholder="Enter the title of announcement" maxlength="500" required></input>
+    <br /><br />&nbsp;&nbsp;
+    <button class="menuElement" type="submit">Create</button>
+</form>
+
+<br />
+
+{{> _notifylogin}}
+
+<br />
+{{/if}}
+
+<p>
+    {{#each forum}}
+    <span class="curruser">{{../user.username}}</span><br /><span class="msguser">{{user}}</span><span> created:</span><br />
+    <p class="notice">
+        <a onclick="javascript:location.href='/forum0&{{id}}'" target="_blank">{{title}}</a>
+    </p>
+    <form class="hidden" method="post" action="/discussion/{{id}}?_method=DELETE">
+        <input type="hidden" name="_method" value="DELETE">
+        <button type="submit" class="menuElement centerButton" value="Delete">Delete</button>
+    </form>
+    {{else}}
+    <p class="notice">
+        <a onclick=href='#'>There are no more Discussions or An Error Occured!<br />You may create some Discussions</a>
+    </p>
+    {{/each}}
+</p>
+
+<br />
+
+<p>
+    <a class="menuElement centerButton" onclick=href='/discussion{{nextpage}}'>View More</a>
+</p>
+
+<br />
+
+{{> _about}}
+
+<script src="./js/hidedelete.js"></script>
