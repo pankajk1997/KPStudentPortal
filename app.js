@@ -482,7 +482,7 @@ app.post('/register', (req, res) => {
                           username: req.body.username
                         }, function (err, obj) {
 
-                          var verlink = 'http://127.0.0.1:3000/verify' + obj._id;
+                          var verlink = 'https://rocky-brook-46201.herokuapp.com/verify' + obj._id;
 
                           var mailOptions = {
                             from: 'cdackpb@gmail.com',
