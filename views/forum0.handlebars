@@ -7,7 +7,7 @@
 <h4>Share what you are thinking :</h4>
 <form class="formdiv" action="/forum{{fid}}" method="post">
     &nbsp;&nbsp;
-    <textarea name="chat" placeholder="Enter your Message" maxlength="10000" required></textarea>
+    <textarea name="chat" placeholder="Enter your Message" maxlength="8000" required></textarea>
     <br /><br />&nbsp;&nbsp;
     <button class="menuElement" type="submit">Submit</button>
 </form>
@@ -26,7 +26,7 @@
     </pre>
     <form class="hidden" method="post" action="/forum/{{id}}?_method=DELETE">
         <input type="hidden" name="_method" value="DELETE">
-        <button type="submit" class="menuElement centerButton" value="Delete">Delete</button>
+        <button type="submit" class="menuElement leftButton" value="Delete">Delete</button>
     </form>
     {{else}}
     <p class="blueChat">The Forum has no more messages or An Error Occured!</p>

@@ -53,14 +53,14 @@
 
 <p>
     {{#each media}}
-    <span class="curruser">{{../user.username}}</span><br /><span class="msguser">{{user}}</span><span> posted:</span><br />
+    <span class="curruser">{{../user.username}}</span><br /><span class="msguser">{{user}}</span><span> added:</span><br />
     <p class="blueChat description">
         <img class="gallery" src="{{thumb}}" alt="Media Link" onclick="javascript:location.href='{{link}}'" target="_blank" />
         <a onclick="javascript:location.href='{{link}}'" target="_blank">{{title}}</a>
     </p>
     <form class="hidden" method="post" action="/gallery/{{id}}?_method=DELETE">
         <input type="hidden" name="_method" value="DELETE">
-        <button type="submit" class="menuElement centerButton" value="Delete">Delete</button>
+        <button type="submit" class="menuElement leftButton" value="Delete">Delete</button>
     </form>
     {{else}}
     <p class="blueChat description">

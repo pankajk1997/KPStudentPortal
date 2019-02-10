@@ -73,12 +73,12 @@ pre {
 	border-radius: 7px;
 }
 
-.rightButton {
-	float: right;
-}
-
 .centerButton {
 	margin-left: 45%;
+}
+
+.leftButton {
+	margin-left: 5%;
 }
 
 #main {
@@ -99,7 +99,7 @@ pre {
 
 .notice {
 	background-color: rgb(205, 157, 245);
-	width: 75%;
+	width: 91%;
 	margin-left: 40px;
 	margin-bottom: 10px;
 	border-radius: 20px;
@@ -119,7 +119,7 @@ pre {
 
 .blueChatHead {
 	background-color: lightblue;
-	width: 95%;
+	width: 95.5%;
 	margin-bottom: 25px;
 	border-radius: 0 0 50px 50px;
 	padding: 12px 25px;
@@ -138,7 +138,7 @@ pre {
 
 .redChatHead {
 	background-color: lightcoral;
-	width: 95%;
+	width: 95.5%;
 	margin-bottom: 25px;
 	border-radius: 0 0 50px 50px;
 	padding: 12px 25px;
@@ -162,8 +162,8 @@ pre {
 .gallery {
 	margin-right: 20px;
 	float: left;
-	width: 250px;
-	height: 200px;
+	width: 230px;
+	height: 180px;
 }
 
 .description {
@@ -190,20 +190,20 @@ button:hover {
 	cursor: pointer;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1023px) {
 	body {
 		width: 1150px;
 	}
 
 	.topBar {
-		padding: 1px 50px;
+		padding: 1px 25px;
 	}
 
 	.logoBar {
-		padding: 1px 50px;
+		padding: 1px 25px;
 	}
 
 	#menuBar {
-		padding: 10px;
+		padding: 10px 0;
 	}
 }

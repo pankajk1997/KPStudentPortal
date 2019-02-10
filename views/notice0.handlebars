@@ -52,13 +52,13 @@
 
 <p>
     {{#each notice}}
-    <span class="curruser">{{../user.username}}</span><br /><span class="msguser">{{user}}</span><span> posted:</span><br />
+    <span class="curruser">{{../user.username}}</span><br /><span class="msguser">{{user}}</span><span> announced:</span><br />
     <p class="notice">
         <a onclick="javascript:location.href='{{link}}'" target="_blank">{{title}}</a>
     </p>
     <form class="hidden" method="post" action="/notice/{{id}}?_method=DELETE">
         <input type="hidden" name="_method" value="DELETE">
-        <button type="submit" class="menuElement centerButton" value="Delete">Delete</button>
+        <button type="submit" class="menuElement leftButton" value="Delete">Delete</button>
     </form>
     {{else}}
     <p class="notice">

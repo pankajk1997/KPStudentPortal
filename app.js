@@ -266,9 +266,9 @@ app.post('/forum:forumid', ensureAuthenticated, (req, res) => {
     errors.push({
       output: 'Please add a message!'
     });
-  } else if (req.body.chat.length > 10000) {
+  } else if (req.body.chat.length > 8000) {
     errors.push({
-      output: 'Please limit the message to 10000 characters!'
+      output: 'Please limit the message to 8000 characters!'
     });
   }
 
