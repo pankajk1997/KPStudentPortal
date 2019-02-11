@@ -45,6 +45,9 @@ var msg = mongoose.model('message');
 require('./models/media');
 const media = mongoose.model('media');
 
+require('./models/reso');
+const reso = mongoose.model('reso');
+
 require('./models/user');
 var usr = mongoose.model('user');
 
@@ -161,7 +164,21 @@ app.get('/gallery:page', (req, res) => {
 });
 
 app.get('/res:page', (req, res) => {
-  res.render('res' + req.params.page);
+  var bool = Boolean(Number(req.params.page));
+  var nextpage = Number(req.params.page) + 1;
+  reso.find({})
+    .sort({
+      date: 'desc'
+    })
+    .skip(10 * Number(req.params.page))
+    .limit(10)
+    .then(reso => {
+      res.render('res0', {
+        reso: reso,
+        bool: bool,
+        nextpage: nextpage
+      });
+    });
 });
 
 app.get('/login', (req, res) => {
@@ -344,6 +361,70 @@ app.post('/gallery', ensureAuthenticated, (req, res) => {
   }
 });
 
+app.post('/res', ensureAuthenticated, (req, res) => {
+  let errors = [];
+
+  if (!req.body.thumb) {
+    errors.push({
+      output: 'Please add a thumbnail link! you can fill - https://i.ibb.co/HBHm0Vr/gallery.png'
+    });
+  } else if (req.body.thumb.length > 500) {
+    errors.push({
+      output: 'Please limit the link to 500 characters!'
+    });
+  }
+
+  if (!req.body.link) {
+    errors.push({
+      output: 'Please add a media link!'
+    });
+  } else if (req.body.link.length > 500) {
+    errors.push({
+      output: 'Please limit the link to 500 characters!'
+    });
+  }
+
+  if (!req.body.desc) {
+    errors.push({
+      output: 'Please add a description!'
+    });
+  } else if (req.body.desc.length > 700) {
+    errors.push({
+      output: 'Please limit the description to 700 characters!'
+    });
+  }
+
+  if (!req.body.title) {
+    errors.push({
+      output: 'Please add a title!'
+    });
+  } else if (req.body.title.length > 90) {
+    errors.push({
+      output: 'Please limit the title to 90 characters!'
+    });
+  }
+
+  if (errors.length > 0) {
+    res.render('res0', {
+      errors: errors
+    });
+  } else {
+    const user = {
+      title: req.body.title,
+      desc: req.body.desc,
+      link: req.body.link,
+      thumb: req.body.thumb,
+      user: req.user.username
+    }
+    new reso(user)
+      .save()
+      .then(reso => {
+        req.flash('success_msg', 'Resource Added!');
+        res.redirect('res0');
+      })
+  }
+});
+
 app.post('/login', (req, res, next) => {
   passport.authenticate('local', {
     successRedirect: '/',
@@ -521,7 +602,7 @@ app.delete('/notice/:id', ensureAuthenticated, (req, res) => {
     })
     .then(() => {
       req.flash('success_msg', 'Announcement Deleted!');
-      res.redirect('/notice0');
+      res.redirect(req.get('referer'));
     });
 });
 
@@ -533,7 +614,7 @@ app.delete('/discussion/:id', ensureAuthenticated, (req, res) => {
     })
     .then(() => {
       req.flash('success_msg', 'Discussion Deleted!');
-      res.redirect('/discussion0');
+      res.redirect(req.get('referer'));
     });
 });
 
@@ -555,7 +636,18 @@ app.delete('/gallery/:id', ensureAuthenticated, (req, res) => {
     })
     .then(() => {
       req.flash('success_msg', 'Media Deleted!');
-      res.redirect('/gallery0');
+      res.redirect(req.get('referer'));
+    });
+});
+
+app.delete('/res/:id', ensureAuthenticated, (req, res) => {
+  reso.deleteOne({
+      _id: req.params.id,
+      user: req.user.username
+    })
+    .then(() => {
+      req.flash('success_msg', 'Resource Deleted!');
+      res.redirect(req.get('referer'));
     });
 });
 

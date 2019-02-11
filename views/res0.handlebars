@@ -1,4 +1,4 @@
-<h3>GALLERY</h3>
+<h3>RESOURCES</h3>
 
 <br />
 
@@ -24,14 +24,18 @@
 
 {{#if bool}}
 {{else}}
-<h4>Share your photos and videos :</h4>
-<form class="formdiv" action="/gallery" method="post">
+<h4>Share a valuable resource :</h4>
+<form class="formdiv" action="/res" method="post">
     &nbsp;&nbsp;
-    <label for="title">Occasion: &nbsp;&nbsp;&nbsp;&nbsp;</label>
-    <input name="title" placeholder="Enter the title of photoshoot" maxlength="100" required></input>
+    <label for="title">Title: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+    <input name="title" placeholder="Enter the title of the stuff to be posted" maxlength="90" required></input>
+    <br /><br />&nbsp;&nbsp;
+    <label for="desc">Description:&nbsp;</label>
+    <input name="desc" placeholder="Enter a brief description of the stuff to be posted"
+        maxlength="700" required></input>
     <br /><br />&nbsp;&nbsp;
     <label for="link">Link: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-    <input name="link" placeholder="Enter the media location link (like google drive folder link) " maxlength="500"
+    <input name="link" placeholder="Enter the location link of the stuff to be posted (like a link of an article) " maxlength="500"
         required></input>
     <br /><br />&nbsp;&nbsp;
     <label for="thumb">Thumbnail: &nbsp;</label>
@@ -52,20 +56,21 @@
 {{/if}}
 
 <p>
-    {{#each media}}
+    {{#each reso}}
     <span class="curruser">{{../user.username}}</span><br /><span class="msguser">{{user}}</span><span> added:</span><br />
-    <p class="blueChat description">
-        <img class="gallery" src="{{thumb}}" alt="Media Link" onclick="javascript:location.href='{{link}}'" target="_blank" />
+    <p class="blueChat">
+        <img class="gallery" src="{{thumb}}" alt="Resource Link" onclick="javascript:location.href='{{link}}'" target="_blank" />
         <a onclick="javascript:location.href='{{link}}'" target="_blank">{{title}}</a>
+        <p class="description">{{desc}}</p>
     </p>
-    <form class="hidden" method="post" action="/gallery/{{id}}?_method=DELETE">
+    <form class="hidden" method="post" action="/res/{{id}}?_method=DELETE">
         <input type="hidden" name="_method" value="DELETE">
         <button type="submit" class="menuElement leftButton" value="Delete">Delete</button>
     </form>
     {{else}}
     <p class="blueChat description">
         <img class="gallery" src="https://image.ibb.co/dExaZm/original.gif" alt="Gallery Empty" onclick="javascript:location.href='#'" />
-        <a onclick=href='#'>The Gallery has no more content or An Error Occured!<br />You may add some Media</a>
+        <a onclick=href='#'>The are no more content or An Error Occured!<br />You may add some Resource</a>
     </p>
     {{/each}}
 </p>
@@ -73,7 +78,7 @@
 <br />
 
 <p>
-    <a class="menuElement centerButton" onclick=href='/gallery{{nextpage}}'>View More</a>
+    <a class="menuElement centerButton" onclick=href='/res{{nextpage}}'>View More</a>
 </p>
 
 <br />
