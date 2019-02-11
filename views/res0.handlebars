@@ -58,9 +58,8 @@
 <p>
     {{#each reso}}
     <span class="curruser">{{../user.username}}</span><br /><span class="msguser">{{user}}</span><span> added:</span><br />
-    <p class="blueChat">
-        <img class="gallery" src="{{thumb}}" alt="Resource Link" onclick="javascript:location.href='{{link}}'" target="_blank" />
-        <a onclick="javascript:location.href='{{link}}'" target="_blank">{{title}}</a>
+    <p class="blueChat pa" onclick="javascript:location.href='{{link}}'">
+        <img class="gallery" src="{{thumb}}" alt="Resource Link" onclick="javascript:location.href='{{link}}'"/>{{title}}
         <p class="description">{{desc}}</p>
     </p>
     <form class="hidden" method="post" action="/res/{{id}}?_method=DELETE">
@@ -69,8 +68,8 @@
     </form>
     {{else}}
     <p class="blueChat description">
-        <img class="gallery" src="https://image.ibb.co/dExaZm/original.gif" alt="Gallery Empty" onclick="javascript:location.href='#'" />
-        <a onclick=href='#'>The are no more content or An Error Occured!<br />You may add some Resource</a>
+        <img class="gallery" src="https://image.ibb.co/dExaZm/original.gif" alt="Gallery Empty" />
+        The are no more content or An Error Occured!<br />You may add some Resource
     </p>
     {{/each}}
 </p>

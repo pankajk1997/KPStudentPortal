@@ -95,8 +95,8 @@ app.get('/notice:page', (req, res) => {
     .sort({
       date: 'desc'
     })
-    .skip(10 * Number(req.params.page))
-    .limit(10)
+    .skip(20 * Number(req.params.page))
+    .limit(20)
     .then(notice => {
       res.render('notice0', {
         notice: notice,
@@ -113,8 +113,8 @@ app.get('/discussion:page', (req, res) => {
     .sort({
       date: 'desc'
     })
-    .skip(10 * Number(req.params.page))
-    .limit(10)
+    .skip(20 * Number(req.params.page))
+    .limit(20)
     .then(forum => {
       res.render('discussion0', {
         forum: forum,
@@ -133,8 +133,8 @@ app.get('/forum:page&:forumid', (req, res) => {
     .sort({
       date: 'desc'
     })
-    .skip(10 * Number(req.params.page))
-    .limit(10)
+    .skip(20 * Number(req.params.page))
+    .limit(20)
     .then(message => {
       res.render('forum0', {
         message: message,

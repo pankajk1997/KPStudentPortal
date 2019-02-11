@@ -182,6 +182,12 @@ a:hover {
 	cursor: pointer;
 }
 
+.pa:hover {
+	color: black;
+	background-color: #FFE4B5;
+	cursor: pointer;
+}
+
 .hovshade:hover {
 	box-shadow: 0 0 5px 2px;
 }

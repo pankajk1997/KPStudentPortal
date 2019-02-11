@@ -55,17 +55,13 @@
 <p>
     {{#each notice}}
     <span class="curruser">{{../user.username}}</span><br /><span class="msguser">{{user}}</span><span> announced:</span><br />
-    <p class="notice">
-        <a onclick="javascript:location.href='{{link}}'" target="_blank">{{title}}</a>
-    </p>
+    <p class="notice pa" onclick="javascript:location.href='{{link}}'">{{title}}</p>
     <form class="hidden" method="post" action="/notice/{{id}}?_method=DELETE">
         <input type="hidden" name="_method" value="DELETE">
         <button type="submit" class="menuElement leftButton" value="Delete">Delete</button>
     </form>
     {{else}}
-    <p class="notice">
-        <a onclick=href='#'>There are no more announcements or An Error Occured!<br />You may add some Announcements</a>
-    </p>
+    <p class="notice">There are no more announcements or An Error Occured!<br />You may add some Announcements</p>
     {{/each}}
 </p>
 

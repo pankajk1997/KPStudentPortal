@@ -54,9 +54,8 @@
 <p>
     {{#each media}}
     <span class="curruser">{{../user.username}}</span><br /><span class="msguser">{{user}}</span><span> added:</span><br />
-    <p class="blueChat description">
-        <img class="gallery" src="{{thumb}}" alt="Media Link" onclick="javascript:location.href='{{link}}'" target="_blank" />
-        <a onclick="javascript:location.href='{{link}}'" target="_blank">{{title}}</a>
+    <p class="blueChat description pa" onclick="javascript:location.href='{{link}}'">
+        <img class="gallery" src="{{thumb}}" alt="Media Link" onclick="javascript:location.href='{{link}}'" />{{title}}
     </p>
     <form class="hidden" method="post" action="/gallery/{{id}}?_method=DELETE">
         <input type="hidden" name="_method" value="DELETE">
@@ -64,8 +63,8 @@
     </form>
     {{else}}
     <p class="blueChat description">
-        <img class="gallery" src="https://image.ibb.co/dExaZm/original.gif" alt="Gallery Empty" onclick="javascript:location.href='#'" />
-        <a onclick=href='#'>The Gallery has no more content or An Error Occured!<br />You may add some Media</a>
+        <img class="gallery" src="https://image.ibb.co/dExaZm/original.gif" alt="Gallery Empty" />
+        The Gallery has no more content or An Error Occured!<br />You may add some Media
     </p>
     {{/each}}
 </p>
