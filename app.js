@@ -26,7 +26,7 @@ const {
 
 app.use(express.static('public'));
 
-app.use(favicon('/images/favicon.ico'));
+app.use(favicon('./images/favicon.ico'));
 
 const db = require('./config/database');
 
