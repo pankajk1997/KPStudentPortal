@@ -1,4 +1,5 @@
 const express = require('express');
+const favicon = require('express-favicon');
 const passport = require('passport');
 const mongoose = require('mongoose');
 const exphbs = require('express-handlebars');
@@ -24,6 +25,8 @@ const {
 } = require('./helpers/auth');
 
 app.use(express.static('public'));
+
+app.use(favicon('/images/favicon.ico'));
 
 const db = require('./config/database');
 
