@@ -1,6 +1,143 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
+
 <url>
-  <loc></loc>
+  <loc>https://cdackpb.herokuapp.com/</loc>
 </url>
+
+<url>
+  <loc>https://cdackpb.herokuapp.com/notice0</loc>
+</url>
+<url>
+  <loc>https://cdackpb.herokuapp.com/notice1</loc>
+</url>
+<url>
+  <loc>https://cdackpb.herokuapp.com/notice2</loc>
+</url>
+<url>
+  <loc>https://cdackpb.herokuapp.com/notice3</loc>
+</url>
+<url>
+  <loc>https://cdackpb.herokuapp.com/notice4</loc>
+</url>
+<url>
+  <loc>https://cdackpb.herokuapp.com/notice5</loc>
+</url>
+<url>
+  <loc>https://cdackpb.herokuapp.com/notice6</loc>
+</url>
+<url>
+  <loc>https://cdackpb.herokuapp.com/notice7</loc>
+</url>
+<url>
+  <loc>https://cdackpb.herokuapp.com/notice8</loc>
+</url>
+<url>
+  <loc>https://cdackpb.herokuapp.com/notice9</loc>
+</url>
+
+<url>
+  <loc>https://cdackpb.herokuapp.com/discussion0</loc>
+</url>
+<url>
+  <loc>https://cdackpb.herokuapp.com/discussion1</loc>
+</url>
+<url>
+  <loc>https://cdackpb.herokuapp.com/discussion2</loc>
+</url>
+<url>
+  <loc>https://cdackpb.herokuapp.com/discussion3</loc>
+</url>
+<url>
+  <loc>https://cdackpb.herokuapp.com/discussion4</loc>
+</url>
+<url>
+  <loc>https://cdackpb.herokuapp.com/discussion5</loc>
+</url>
+<url>
+  <loc>https://cdackpb.herokuapp.com/discussion6</loc>
+</url>
+<url>
+  <loc>https://cdackpb.herokuapp.com/discussion7</loc>
+</url>
+<url>
+  <loc>https://cdackpb.herokuapp.com/discussion8</loc>
+</url>
+<url>
+  <loc>https://cdackpb.herokuapp.com/discussion9</loc>
+</url>
+
+<url>
+  <loc>https://cdackpb.herokuapp.com/gallery0</loc>
+</url>
+<url>
+  <loc>https://cdackpb.herokuapp.com/gallery1</loc>
+</url>
+<url>
+  <loc>https://cdackpb.herokuapp.com/gallery2</loc>
+</url>
+<url>
+  <loc>https://cdackpb.herokuapp.com/gallery3</loc>
+</url>
+<url>
+  <loc>https://cdackpb.herokuapp.com/gallery4</loc>
+</url>
+<url>
+  <loc>https://cdackpb.herokuapp.com/gallery5</loc>
+</url>
+<url>
+  <loc>https://cdackpb.herokuapp.com/gallery6</loc>
+</url>
+<url>
+  <loc>https://cdackpb.herokuapp.com/gallery7</loc>
+</url>
+<url>
+  <loc>https://cdackpb.herokuapp.com/gallery8</loc>
+</url>
+<url>
+  <loc>https://cdackpb.herokuapp.com/gallery9</loc>
+</url>
+
+<url>
+  <loc>https://cdackpb.herokuapp.com/res0</loc>
+</url>
+<url>
+  <loc>https://cdackpb.herokuapp.com/res1</loc>
+</url>
+<url>
+  <loc>https://cdackpb.herokuapp.com/res2</loc>
+</url>
+<url>
+  <loc>https://cdackpb.herokuapp.com/res3</loc>
+</url>
+<url>
+  <loc>https://cdackpb.herokuapp.com/res4</loc>
+</url>
+<url>
+  <loc>https://cdackpb.herokuapp.com/res5</loc>
+</url>
+<url>
+  <loc>https://cdackpb.herokuapp.com/res6</loc>
+</url>
+<url>
+  <loc>https://cdackpb.herokuapp.com/res7</loc>
+</url>
+<url>
+  <loc>https://cdackpb.herokuapp.com/res8</loc>
+</url>
+<url>
+  <loc>https://cdackpb.herokuapp.com/res9</loc>
+</url>
+
+<url>
+  <loc>https://cdackpb.herokuapp.com/login</loc>
+</url>
+<url>
+  <loc>https://cdackpb.herokuapp.com/register</loc>
+</url>
+
+<url>
+  <loc>https://cdackpb.herokuapp.com/forum0&5c6005af8fc1f3001740d3f2</loc>
+</url>
+
 </urlset>
