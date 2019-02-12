@@ -20,13 +20,13 @@ var transporter = nodemailer.createTransport({
 
 const app = express();
 
+app.use(favicon(__dirname + '/public/images/favicon.png'));
+
 const {
   ensureAuthenticated
 } = require('./helpers/auth');
 
 app.use(express.static('public'));
-
-app.use(favicon('./images/favicon.ico'));
 
 const db = require('./config/database');
 
