@@ -21,7 +21,7 @@ var transporter = nodemailer.createTransport({
 
 const app = express();
 
-app.use(compression())
+app.use(compression());
 
 app.use(favicon(__dirname + '/public/images/favicon.png'));
 
