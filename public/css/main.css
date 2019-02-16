@@ -198,6 +198,10 @@ button:hover {
 	cursor: pointer;
 }
 
+.centerbox {
+	text-align: center;
+}
+
 @media only screen and (max-width: 1024px) {
 	body {
 		width: 1150px;

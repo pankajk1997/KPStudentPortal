@@ -658,7 +658,7 @@ app.delete('/res/:id', ensureAuthenticated, (req, res) => {
 });
 
 app.use((req, res) => {
-  res.status(404).send('404');
+  res.render('404');
 });
 
 const port = process.env.PORT || 3000;
